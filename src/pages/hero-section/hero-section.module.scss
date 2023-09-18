@@ -1,0 +1,108 @@
+.HeroSection{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.imgContainer{
+  img{
+    width: 50rem;
+  }
+}
+.phone{
+  position: absolute;
+  img{
+    width: 15rem;
+  }
+}
+
+.cash{
+  position: absolute;
+  margin-bottom: 3rem;
+  color: white;
+  font-size: 80px;
+  font-family: Agrandir_;
+  font-weight: 800;
+}
+.app{
+  position: absolute;
+  margin-top: 8rem;
+  color: white;
+  font-size: 80px;
+  font-family: Agrandir_;
+  font-weight: 800;
+}
+
+.header{
+  width: 100%;
+  position: absolute;
+  top:1rem
+}
+
+.footer{
+  position: absolute;
+  bottom: 0rem;
+  width: 100%;
+}
+
+.cube2{
+  position: absolute;
+  top:10rem;
+  left: -1rem;
+}
+
+.pillar{
+  position: absolute;
+  bottom:-10rem;
+  right: 1rem;
+  img{
+    width: 20rem;
+  }
+}
+
+.stairs{
+  display: none;
+  position: absolute;
+  top: 5rem;
+  right: 10rem;
+  img{
+    width: 15rem;
+  }
+}
+
+.cube1{
+  display: none;
+  position: absolute;
+  bottom:10rem;
+  left: 10rem;
+}
+
+@media screen and (min-width: 800px) {
+  .stairs{
+    display: block;
+  }
+  .cash{
+    font-size: 130px;
+    margin-bottom: 5rem;
+  }
+  .app{
+    margin-top: 10rem;
+    font-size: 130px;
+  }
+  .phone{
+    img{
+      width: 20rem;
+    }
+  }
+  .cube2{
+    left: 10rem;
+  }
+  .cube1{
+    display: block;
+  }
+}

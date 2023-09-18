@@ -1,0 +1,494 @@
+@mixin absolutePosition($top: null, $right: null, $bottom: null, $left: null) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin width-position($width:null, $height:null, $position...) {
+  width: $width;
+  height: $height;
+  @include absolutePosition($position...);
+}
+
+.PaymentsSection {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.leftCol {
+  @include width-position($width: 750px, $bottom: -3rem, $left: -42rem);
+}
+
+.rightCol {
+  @include width-position($width: 750px, $bottom: 5rem, $right: -1rem);
+}
+
+.middleCol {
+  @include width-position($width: 750px, $bottom: -3rem, $right: 20rem);
+}
+
+.pillarMedium1 {
+  @include width-position($width: 175px, $bottom: 2rem, $left: 10rem);
+}
+
+.pillarMedium2 {
+  @include width-position($width: 175px, $bottom: 3rem, $left: 25rem);
+}
+
+.pillarMedium3 {
+  @include width-position($width: 175px, $bottom: -4rem, $left: 40rem);
+}
+
+.pillarMedium4 {
+  @include width-position($width: 175px, $bottom: 8rem, $right: 10rem);
+}
+
+.pillarLarge {
+  @include width-position($width: 175px, $bottom: 10rem, $right: 35rem);
+}
+
+.pillarSmall {
+  @include width-position($width: 100px, $bottom: 8rem, $left: 20rem);
+}
+.phone{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.paymentsLine{
+  @include width-position($width:100%,$bottom: 1rem);
+  img{
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+
+.text{
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  align-items: start;
+  @include width-position($width:350px, $top:20%,$left:18%);
+
+  .payment{
+    color: #00D54B;
+    font-family: Agrandir_;
+    font-weight: 800;
+    font-size: 40px;
+  }
+
+  .description{
+    width: 100%;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 299px) {
+  /* Your CSS styles for screens < 300px go here */
+}
+
+@media screen and (min-width: 300px) and (max-width: 399px) {
+  .PaymentsSection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .leftCol{
+    bottom: -7rem;
+    left: -45rem;
+  }
+  .rightCol{
+    bottom: -20rem;
+
+  }
+  .middleCol{
+    bottom: -10rem;
+    width: 200px;
+  }
+  .pillarSmall,
+  .pillarMedium4,
+  .pillarMedium2,
+  .pillarMedium3,
+  .pillarMedium1,
+  .pillarLarge
+  {
+    display: none;
+  }
+  .pillarMedium1{
+    left: 5rem;
+    bottom: 5rem;
+  }
+  .pillarLarge{
+    right: 13rem;
+  }
+  .phone {
+    display: inline-block;
+    position: absolute;
+    top: 18rem;
+    right: 16rem;
+    height: 300px;
+    width: 300px;
+  }
+  .text{
+    width: 100%;
+    position: absolute;
+    top: 5rem;
+    left: 1.5rem;
+    .payment{
+      font-size: 44px ;
+    }
+    .description{
+      width: 300px;
+      font-size: 16px;
+    }
+  }
+  .leftCol{
+    z-index: 10;
+  }
+  .middleCol{
+    display: none;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 499px) {
+  .PaymentsSection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .rightCol{
+    @include width-position($width:200px,$height:30rem,$bottom:1rem,$right:30rem)
+  }
+  .middleCol{
+    bottom: -10rem;
+    width: 200px;
+  }
+  .pillarSmall,
+  .pillarMedium4,
+  .pillarMedium2,
+  .pillarMedium3,
+  .pillarMedium1,
+  .pillarLarge
+  {
+    display: none;
+  }
+  .pillarMedium1{
+    left: 5rem;
+    bottom: 5rem;
+  }
+  .pillarLarge{
+    right: 13rem;
+  }
+  .phone {
+    display: inline-block;
+    position: absolute;
+    top: 15rem;
+    right: 16.5rem;
+    height: 300px;
+    width: 300px;
+  }
+  .text{
+    width: 100%;
+    position: absolute;
+    top: 5rem;
+    left: 3rem;
+    .payment{
+      font-size: 48px ;
+    }
+    .description{
+      width: 300px;
+      font-size: 16px;
+    }
+  }
+  .leftCol{
+    z-index: 10;
+  }
+  .middleCol{
+    display: none;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 599px) {
+  .PaymentsSection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .rightCol{
+    @include width-position($width:810px,$bottom:1rem,$right:-4rem)
+  }
+  .middleCol{
+    bottom: -10rem;
+  }
+  .pillarSmall,
+  .pillarMedium4,
+  .pillarMedium2,
+  .pillarMedium3,
+  .pillarMedium1,
+  {
+    display: none;
+  }
+  .pillarMedium1{
+    left: 5rem;
+    bottom: 5rem;
+  }
+  .pillarLarge{
+    right: 13rem;
+  }
+  .phone {
+    display: inline-block;
+    position: absolute;
+    top: 25rem;
+    right: 25rem;
+    height: 300px;
+    width: 300px;
+  }
+  .text{
+    width: 100%;
+    position: absolute;
+    top: 10rem;
+    left: 3rem;
+    .payment{
+      font-size: 64px ;
+    }
+    .description{
+      width: 500px;
+      font-size: 18px;
+    }
+  }
+  .leftCol{
+    z-index: 10;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 699px) {
+  .PaymentsSection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .rightCol{
+    @include width-position($width:810px,$bottom:1rem,$right:-4rem)
+  }
+  .middleCol{
+    bottom: -10rem;
+  }
+  .pillarSmall,
+  .pillarMedium4,
+  .pillarMedium2,
+  .pillarMedium3{
+    display: none;
+  }
+  .pillarMedium1{
+    left: 5rem;
+    bottom: 5rem;
+  }
+  .pillarLarge{
+    right: 13rem;
+  }
+  .phone {
+    display: inline-block;
+    position: absolute;
+    top: 25rem;
+    right: 25rem;
+    height: 300px;
+    width: 300px;
+  }
+  .text{
+    width: 100%;
+    position: absolute;
+    top: 10rem;
+    .payment{
+      font-size: 64px ;
+    }
+    .description{
+      width: 500px;
+      font-size: 18px;
+    }
+  }
+  .leftCol{
+    z-index: 10;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 799px) {
+  .PaymentsSection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .rightCol{
+    @include width-position($width:810px,$bottom:1rem,$right:-4rem)
+  }
+  .middleCol{
+    bottom: -10rem;
+  }
+  .pillarSmall,
+  .pillarMedium4,
+  .pillarMedium2,
+  .pillarMedium3{
+    display: none;
+  }
+  .pillarMedium1{
+    left: 5rem;
+    bottom: 5rem;
+  }
+  .pillarLarge{
+    right: 13rem;
+  }
+  .phone {
+    display: inline-block;
+    position: absolute;
+    top: 25rem;
+    right: 25rem;
+    height: 300px;
+    width: 300px;
+  }
+  .text{
+    width: 100%;
+    position: absolute;
+    top: 10rem;
+    .payment{
+      font-size: 64px ;
+    }
+    .description{
+      width: 500px;
+      font-size: 18px;
+    }
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 899px) {
+  .rightCol{
+    @include width-position($width:810px,$bottom:1rem,$right:-4rem)
+  }
+  .middleCol{
+    bottom: -10rem;
+  }
+  .pillarSmall,
+  .pillarMedium4,
+  .pillarMedium2,
+  .pillarMedium3{
+    display: none;
+  }
+  .pillarMedium1{
+    left: 5rem;
+    bottom: 5rem;
+  }
+  .pillarLarge{
+    right: 13rem;
+  }
+  .phone {
+    display: inline-block;
+    position: absolute;
+    top: 10rem;
+    right: -15rem;
+    height: unset;
+    width: unset;
+  }
+  .text{
+    width: 400px;
+    left: 7rem;
+    .payment{
+      font-size: 64px ;
+    }
+    .description{
+      font-size: 18px;
+    }
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 999px) {
+  .middleCol{
+    display: none;
+  }
+  .pillarMedium3{
+    display: none;
+  }
+  .text{
+    width: 250px;
+    left: 10rem;
+    .payment{
+      font-size: 35px;
+    }
+    .description{
+      font-size: 14px;
+    }
+  }
+  .pillarMedium2{
+    left: 30rem;
+  }
+  .pillarLarge{
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1099px) {
+  .text{
+    width: 275px;
+    left: 9.5rem;
+  }
+  .middleCol{
+    right:15rem;
+  }
+  .pillarMedium2{
+    display: none;
+  }
+  .pillarMedium1{
+    left: 8rem;
+  }
+  .pillarSmall{
+    left: 16rem;
+  }
+  .pillarMedium3{
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1199px){
+  .middleCol {
+    @include width-position($width: 750px, $bottom: -3rem, $right: 15rem);
+  }
+
+  .pillarLarge {
+    @include width-position($width: 175px, $bottom: 10rem, $right: 28rem);
+  }
+  .text{
+    width: 300px;
+    left: 10.5rem;
+  }
+  .pillarMedium2{
+    display: none;
+  }
+  .pillarLarge{
+    right: 26rem;
+  }
+}
+
+/* Continue this pattern for other ranges */
+
+@media screen and (min-width: 1200px) and (max-width: 1299px){
+  .pillarLarge {
+    right: 30rem;
+  }
+
+  .middleCol{
+    right: 15rem;
+  }
+  .leftCol{
+    left: -40rem;
+  }
+  .text{
+    width: 300px;
+  }
+}

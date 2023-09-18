@@ -1,0 +1,265 @@
+.Banking {
+  width: 100vw;
+  height: 100vh;
+  background-color: #00D54B;
+  position: relative;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+@mixin absolutePosition($top: null, $right: null, $bottom: null, $left: null) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin imageStyle($width) {
+  img {
+    width: $width;
+  }
+}
+
+.stairs1 {
+  @include absolutePosition($bottom: -1rem, $right: -0.5rem);
+  @include imageStyle(66px);
+}
+
+.cubes {
+  @include absolutePosition($bottom: 3.5rem, $right: 5rem);
+  @include imageStyle(160px);
+}
+
+.track2 {
+  @include absolutePosition($bottom: -2rem, $left: 3rem);
+  @include imageStyle(160px);
+}
+
+.tube {
+  @include absolutePosition($bottom: 7rem, $left: 0rem);
+  @include imageStyle(100px);
+}
+
+.phone {
+  @include absolutePosition($bottom: 9.5rem, $left: 5rem);
+  @include imageStyle(200px);
+}
+.stairs2{
+  display: none;
+  @include imageStyle(80px);
+  @include absolutePosition($bottom: 5rem, $left:3rem);
+}
+.track1{
+  display: none;
+  @include imageStyle(270px);
+  @include absolutePosition($bottom: 20rem, $left: 3rem);
+}
+.monster {
+  display: none;
+  @include imageStyle(120px);
+  @include absolutePosition($bottom: 4rem, $right: 5rem);
+}
+.hole{
+  display: none;
+  @include imageStyle(380px);
+  @include absolutePosition($bottom: -8rem, $right: 5rem);
+}
+.hole2{
+  display: none;
+  @include imageStyle(380px);
+  @include absolutePosition($top: -3rem, $left:-4rem);
+}
+.ramp1{
+  display: none;
+  @include imageStyle(280px);
+  @include absolutePosition($bottom: 15rem, $right: 7rem);
+}
+
+.ramp2{
+  display: none;
+  @include imageStyle(280px);
+  @include absolutePosition($bottom: 10rem, $left: 10rem);
+}
+
+.col{
+  display: none;
+  @include imageStyle(130px);
+  @include absolutePosition($top: 3rem, $left: 7rem);
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    align-items: start;
+    margin-top: 5rem;
+
+    .title{
+      font-family: Agrandir_;
+      color: white;
+      font-weight: 800;
+      font-size:40px;
+    }
+    .description{
+      width: 270px;
+      font-size: 14px;
+      text-align: left;
+    }
+  }
+
+  @media (min-height: 660px){
+    .phone{
+      bottom: 13rem;
+    }
+    .text{
+      margin-top: 7rem;
+    }
+  }
+
+  @media screen and (min-width: 430px) and (min-height: 880px){
+    .phone{
+      left: 8rem;
+    }
+    .text{
+      .title{
+        font-size: 48px;
+      }
+      .description{
+        width: 320px;
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+  }
+
+@media screen and (min-width: 500px){
+    .phone{
+      left: 10rem;
+    }
+}
+
+@media screen and (min-width: 700px) {
+  .stairs2{
+    display: inline;
+  }
+  .track1{
+    display: inline;
+  }
+  .monster {
+    display: inline;
+  }
+  .hole{
+    display: inline;
+  }
+  .ramp1{
+    display: inline;
+  }
+  .cubes {
+    @include absolutePosition($bottom: 8rem, $left: 4rem);
+    @include imageStyle(240px);
+  }
+  .stairs1 {
+    @include absolutePosition($bottom: 10rem, $right: -0.5rem);
+    @include imageStyle(90px);
+  }
+  .track2{
+    display: none;
+  }
+  .tube{
+    bottom: 1rem;
+    left: 10rem;
+  }
+  .phone{
+    @include absolutePosition($top: 10rem, $right: -10rem);
+  }
+  .text{
+    @include absolutePosition($top:5rem,$left: 10rem)
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .track2{
+    display: inline;
+    @include imageStyle(270px);
+    @include absolutePosition($bottom: 13rem, $left: 8rem);
+  }
+  .track1{
+    @include absolutePosition($bottom: 22rem, $left: 2rem);
+  }
+  .cubes{
+    @include absolutePosition($bottom: 4rem, $left: 2rem);
+  }
+  .phone{
+    @include imageStyle(350px);
+    @include absolutePosition($top: 4rem, $right: -18rem);
+  }
+  .ramp1{
+    @include absolutePosition($bottom:10rem)
+  }
+  .text{
+    @include absolutePosition($top:1rem,$left: 8rem);
+    .title{
+      font-size: 64px;
+    }
+    .descriptiom{
+      font-size: 18px;
+    }
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .hole2{
+    display: inline;
+  }
+  .col{
+    display: inline;
+  }
+  .track2{
+    @include absolutePosition($top:1rem,$right:-30rem);
+  }
+  .track1{
+    @include absolutePosition($top:8rem,$left:20rem);
+  }
+  .phone{
+    @include absolutePosition($top:10rem,$right:5rem);
+  }
+  .text{
+    @include absolutePosition($top:10rem,$left:5rem)
+  }
+  .ramp1{
+    @include absolutePosition($top:15rem,$right:10rem);
+  }
+  .ramp2{
+    display: inline;
+    @include absolutePosition($bottom:5rem,$left:10rem);
+  }
+  .tube{
+    @include absolutePosition($bottom:-1rem,$right:10rem);
+  }
+  .stairs1{
+    @include absolutePosition($bottom:10rem,$right:5rem);
+  }
+  .cubes{
+    @include absolutePosition($bottom: 6rem, $right: -34rem);
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .text{
+    @include absolutePosition($top:15rem,$left:10rem)
+  }
+}
+@media screen and (min-width: 1300px){
+  .text{
+    @include absolutePosition($top:10rem,$left:13rem)
+  }
+}
+
+
+
+
+
+

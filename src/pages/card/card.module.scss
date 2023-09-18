@@ -1,0 +1,150 @@
+.Card {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: black;
+  position: relative;
+}
+
+
+.stairs1{
+  position: absolute;
+  bottom: -0.19rem;
+  right: -0.19rem;
+  img{
+    width: 23.13rem;
+  }
+}
+
+.stairs2{
+  display: none;
+  position: absolute;
+  bottom: -0.13rem;
+  left: -0.44rem;
+  img{
+    width: 18.25rem;
+  }
+}
+
+.phone{
+  position: absolute;
+  rotate: 0.31deg;
+  top:0.63rem;
+  left: 0.09rem;
+  img{
+    width: 9.75rem;
+  }
+}
+
+.title{
+  position: absolute;
+  top: 0.25rem;
+  left: 0.09rem;
+  font-size: 2rem;
+  color: #00D54B;
+  font-weight: 800;
+  font-family: Agrandir_;
+  text-align: left;
+  width: 20.63rem;
+}
+
+
+.description{
+  width: 11.56rem;
+  color: white;
+  font-size: 0.88rem;
+  position: absolute;
+  top: 0.66rem;
+  left: 0.69rem;
+  text-align: left;
+}
+
+
+@media screen and (min-width: 22.5rem) {
+  .phone{
+    top:61.5rem;
+  }
+  .title{
+    top: 7.5rem;
+  }
+  .description{
+    top: 13.75rem;
+    left: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 25rem) {
+  .phone{
+    top: 11.85rem;
+    right: -10rem;
+  }
+  .description{
+    left: 2rem;
+  }
+}
+
+@media screen and (min-width: 43.75rem) {
+  .title{
+    top: 8.75rem;
+    left: 6.25rem;
+  }
+  .description{
+    top:14.375rem;
+    left: 6.25rem;
+  }
+  .stairs2{
+    display: inline;
+  }
+  .phone{
+    top: 9.365rem;
+    right: -12.5rem;
+    img{
+      width: 18.75rem;
+    }
+  }
+}
+
+@media screen and (min-width: 62.5rem) {
+  .stairs1 {
+    right: -3.2rem;
+    img{
+      width: 43.75rem;
+    }
+  }
+
+  .phone{
+    top: 12.5rem;
+    rotate: -4.91deg;
+    img{
+      width: 15.625rem;
+    }
+  }
+  .title{
+    top: 12.5rem;
+    left: 15.625rem;
+  }
+  .description{
+    top:18.725rem;
+    left: 15.625rem;
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  .stairs1{
+    bottom: -10rem;
+    img{
+      width: 62.5rem;
+    }
+  }
+  .stairs2{
+    left: -10rem;
+    bottom: -10rem;
+    img{
+      width: 34.375rem;
+    }
+  }
+  .phone{
+    left: -12.5rem;
+    top: 9.375rem;
+  }
+}

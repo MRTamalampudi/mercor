@@ -1,0 +1,93 @@
+@mixin absolutePosition($top: null, $right: null, $bottom: null, $left: null) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin width-position($width:null, $height:null, $position...) {
+  width: $width;
+  height: $height;
+  @include absolutePosition($position...);
+}
+
+.PaymentsPillars {
+  .rightCol {
+    @include width-position($width: 750px, $bottom: -3rem, $left: -35rem);
+  }
+
+  .leftCol {
+    @include width-position($width: 750px, $bottom: 5rem, $right: -1rem);
+  }
+
+  .middleCol {
+    @include width-position($width: 750px, $bottom: -3rem, $right: 20rem);
+  }
+
+  .pillarMedium1 {
+    @include width-position($width: 175px, $bottom: 2rem, $left: 10rem);
+  }
+
+  .pillarMedium2 {
+    @include width-position($width: 175px, $bottom: 3rem, $left: 25rem);
+  }
+
+  .pillarMedium3 {
+    @include width-position($width: 175px, $bottom: -4rem, $left: 40rem);
+  }
+
+  .pillarMedium4 {
+    @include width-position($width: 175px, $bottom: 8rem, $right: 10rem);
+  }
+
+  .pillarLarge {
+    @include width-position($width: 175px, $bottom: 10rem, $right: 35rem);
+  }
+
+  .pillarSmall {
+    @include width-position($width: 100px, $bottom: 8rem, $left: 20rem);
+  }
+  .paymentsPhone{
+    @include width-position($height: 400px, $bottom: 15rem, $left: 22rem);
+  }
+
+}
+
+
+@media screen and (max-width: 299px) {
+  /* Your CSS styles for screens < 300px go here */
+}
+
+@media screen and (min-width: 300px) and (max-width: 399px) {
+  /* Your CSS styles for screens 300px to 399px go here */
+}
+
+@media screen and (min-width: 400px) and (max-width: 499px) {
+  /* Your CSS styles for screens 400px to 499px go here */
+}
+
+@media screen and (min-width: 500px) and (max-width: 599px) {
+  /* Your CSS styles for screens 500px to 599px go here */
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1199px){
+  .PaymentsPillars {
+    .middleCol {
+      @include width-position($width: 750px, $bottom: -3rem, $right: 15rem);
+    }
+
+    .pillarLarge {
+      @include width-position($width: 175px, $bottom: 10rem, $right: 28rem);
+    }
+  }
+}
+
+/* Continue this pattern for other ranges */
+
+@media screen and (min-width: 1200px) {
+  /* Your CSS styles for screens ≥ 1200px go here */
+}
+
+
+
